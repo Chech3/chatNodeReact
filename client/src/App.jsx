@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import io from "socket.io-client"
 
-const socket = io('http://localhost:4000')
+const socket = io('http://192.168.7.246:4000')
 
 function App() {
   const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState([{body: "Envie un mensaje"
-,from: "Bot"}]);
+  const [messages, setMessages] = useState([{ body: "Envie un mensaje", from: "Bot" }]);
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -51,10 +50,6 @@ function App() {
             ))}
           </ul>
         </form>
-
-
-
-
       </div>
     </>
   )
